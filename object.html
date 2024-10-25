@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        {
+            let bio = {
+                firstName: "Fadhil",
+                lastName: "Firmansyah"
+            }
+
+            Object.seal(bio)
+
+            delete bio.firstName
+            bio.lastName = "Tokyo"
+            console.log(bio)
+        }
+
+        {
+            let bio = {
+                firstName: "Fadhil",
+                lastName: "Firmansyah"
+            }
+
+            Object.freeze(bio)
+
+            delete bio.firstName
+            bio.lastName = "Tokyo"
+            console.log(bio)
+        }
+
+        {
+            let data1 = {
+                firstName: "Fadhil",
+                lastName: "Ok"
+            }
+            let data2 = {
+                lastName: "Firmansyah"
+            }
+            console.log(Object.assign(data1, data2))
+            console.log(data1)
+            console.log(data2)
+        }
+
+        {
+            let data = {
+                firstName: "Fadhil",
+                lastName: "Firmansyah",
+                bio: {
+                    country: "Indonesia",
+                    city: "Semarang"
+                }
+            }
+
+            console.log(Object.values(data))
+            console.log(Object.getOwnPropertyNames(data))
+        }
+    </script>
+</body>
+</html>

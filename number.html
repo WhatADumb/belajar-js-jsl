@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input = "123456"
+        let input_number = Number(input)
+        console.log(`${input} : ${typeof input}`)
+        console.log(`${input_number} : ${typeof input_number}`)
+
+        console.log(Number.MIN_VALUE)
+        console.log(Number.MAX_VALUE)
+        console.log(Number.MIN_SAFE_INTEGER)
+        console.log(Number.MAX_SAFE_INTEGER)
+        console.log(NaN)
+
+        console.log(Number.isNaN("123"))
+        console.log(Number.isNaN("hello"))
+        console.log(Number.isInteger(123))
+
+        let number = Number("312345")
+        console.log(number.toString(2))
+        console.log(number.toLocaleString("id-ID"))
+    </script>
+</body>
+</html>

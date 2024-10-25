@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data = ["Alpha", "Beta", "Celeron", "Delta", "Epsilon"]
+
+        for(let value in data){
+            console.log(`${data[value]}`)
+        }
+
+        for(let value of data){
+            console.log(`${value}`)
+        }
+
+        data.forEach(function(value, index){
+            console.log(`${index}: ${value}`)
+        })
+
+        data.forEach((value, index) => console.log(`${index}: ${value}`))
+        data.forEach((value) => console.log(`${value}`))
+
+        let queue = [1,2,3]
+        queue.push(4)
+        queue.push(5)
+        console.log(queue.shift())
+        console.log(queue.shift())
+        console.log(queue.shift())
+        console.log(queue.shift())
+        console.log(queue.shift())
+        console.log(queue.shift())
+
+        let stack = [1,2,3]
+        stack.push(4)
+        stack.push(5)
+        console.log(stack.pop())
+        console.log(stack.pop())
+        console.log(stack.pop())
+        console.log(stack.pop())
+        console.log(stack.pop())
+        console.log(stack.pop())
+
+        let data1 = [1,2,3,4,5,6,8,4,9]
+        console.log(data1.find((val) => val > 4))
+        console.log(data1.findIndex((val) => val > 4))
+        console.log(data1.includes(7))
+        console.log(data1.includes(9))
+        console.log(data1.indexOf(4))
+        console.log(data1.lastIndexOf(4))
+
+        let dataArray = [0,1,2,3,4,5,6,7,8,9]
+        console.log(dataArray.filter((val) => val % 2 === 0))
+        console.log(dataArray.filter((val) => val % 2 === 1))
+
+        let dataArray1 = ["Alpha", "Beta", "Celeron", "Delta", "Epsilon"]
+        let dataArray2 = [1,2,3,4,5,6,7,8,9]
+        console.log(dataArray1.map((val) => val.toUpperCase()))
+        console.log(dataArray1.reduce((prev, next) => prev + ", " + next))
+        console.log(dataArray2.reduce((before, after) => before + after))
+        console.log(dataArray2.reduceRight((before, next) => before * next))
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        {
+            let name = {}
+            let firstName = Symbol("First Name")
+            let lastName = Symbol("Last Name")
+
+            name[firstName] = "Fadhil"
+            name[lastName] = "Firmansyah"
+
+            console.log(name)
+        }
+
+        {
+            let name = {}
+            let firstName = Symbol()
+            let lastName = Symbol()
+
+            name[Symbol.for("First Name")] = "Fadhil"
+            name[Symbol.for("Last Name")] = "Firmansyah"
+
+            console.log(name)
+        }
+    </script>
+</body>
+</html>

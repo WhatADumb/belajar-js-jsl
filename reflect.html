@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let identity = {}
+
+        Reflect.set(identity, "firstName", "Alpha")
+        Reflect.set(identity, "lastName", "Romero")
+        
+        console.log(identity)
+
+        console.log(Reflect.has(identity, "middleName"))
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let target = {
+            realName: "Jarwo"
+        }
+
+        let handler = {
+            get: function(target, property){
+                console.log(`Access object ${target}-${property}: ${target[property]}`)
+            },
+
+            set: function (target, property, value) {
+                console.log(`Access insert object ${target}-${property}: ${value}`)
+                if(value === null || value === undefined){
+                    target[property] = ""
+                }else{
+                    target[property] = value
+                }
+            }
+        }
+
+        let proxy = new Proxy(target, handler)
+
+        proxy.codeName = "Alpha"
+        proxy.operations = "Stealth"
+
+        console.log(proxy.codeName)
+        console.log(proxy.realName)
+        console.log(proxy.operations)
+
+        console.log(target)
+    </script>
+</body>
+</html>
